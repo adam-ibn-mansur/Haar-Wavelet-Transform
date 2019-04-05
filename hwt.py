@@ -11,7 +11,7 @@ ogImage = pywt.data.camera()
 titles = ['Approximation', 'Horizontal detail', 'Vertical detail', 'Diagonal detail']
 coefficients = pywt.dwt2(ogImage, 'haar')
 
-hwt_A, (hwt_H, hwt_V, hwt_D) = coefficients
+hwt_A, (hwt_HD, hwt_VD, hwt_DD) = coefficients
 figure = plt.figure(figsize = (12, 3))
 for i, a in enumerate([hwt_A, hwt_H, hwt_V, hwt_D]):
     hwt_X = fig.add_subplot(1, 4, i + 1)
